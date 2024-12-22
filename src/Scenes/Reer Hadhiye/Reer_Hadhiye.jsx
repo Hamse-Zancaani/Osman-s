@@ -15,10 +15,10 @@ import {
   import PrintIcon from '@mui/icons-material/Print';
 
   {/*import { useAuthContext } from '../../hooks/useAuthContext' */}
-function Position() {
+function Reer_Hadhiye() {
   
  
-  const url = "http://localhost:8000/employe"
+  const url = "http://localhost:8000/department"
   const [data, setData] = useState([])
   useEffect(() => {
    
@@ -122,9 +122,9 @@ function Position() {
      
      <div className="container max-w-screen-lg mx-auto ">
      <div className="flex  justify-end ">
-    <Link to='/addPatient' className="border-2 mb-2">
+    <Link to='/Add_Hadhiye' className="border-2 mb-2">
     <PersonAddAlt1Icon  className="mr-1"/>
-      <button className=" border-indigo-900   mt-1 mr-4">Add Position</button>
+      <button className=" border-indigo-900   mt-1 mr-4">Add Person</button>
       
       </Link>
       <Tooltip arrow title="Print" >
@@ -134,7 +134,7 @@ function Position() {
             </Tooltip>
             </div>
       <MaterialTable 
-        title="Training Details"
+        title="Patient Details"
         
         columns={columns}
         style={{maxWidth: '89vw', overflow: 'auto'
@@ -196,4 +196,4 @@ function Position() {
   );
 }
 
-export default Position;
+export default Reer_Hadhiye;

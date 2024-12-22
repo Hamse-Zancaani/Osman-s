@@ -3,7 +3,7 @@ import { useState } from "react"
 import {toast} from 'react-toastify'
 import axios from "axios"
 import '../../index.css'
-const Add_Employee = () => {
+const Add_Yuusuf = () => {
  
 
   
@@ -22,8 +22,8 @@ const Add_Employee = () => {
     <div className="min-h-screen p-6 bg-gray-100 flex items-center justify-center text-black">
   <div className="container max-w-screen-lg mx-auto">
     <div>
-      <h2 className="font-semibold text-xl text-yellow-600">Employee Form</h2>
-      <p className="text-gray-500 mb-6">Hage Hrm Software</p>
+      <h2 className="font-semibold text-xl text-yellow-600">Person's Form</h2>
+      <p className="text-gray-500 mb-6">Reer Yuusuf </p>
 
       <div className="bg-grey-300 rounded shadow-lg p-4 px-4 md:p-8 mb-6">
         <div className="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
@@ -43,13 +43,19 @@ const Add_Employee = () => {
               
 
               <div className="md:col-span-5">
-                <label htmlFor ="date of birth">Date Of Birth</label>
-                <input type="date"  className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
-                 onChange={(e)=>setInputs ({...inputs,dateOfBirth:e.target.value})}  />
+              <label>Jilib :</label>
+ <select class="select select-info h-10 border mt-1 rounded px-4 w-full bg-gray-50" onChange={(e)=>setInputs({...inputs,status:e.target.value})}>
+  
+  <option> tusaale reer ****</option>
+  <option> tusaale ******</option>
+  <option>********</option>
+  
+ </select>
+                
               </div>
 
               <div className="md:col-span-5">
-                <label htmlFor ="gender">Gender</label>
+                <label htmlFor ="gender">Goobta Card ka codeynta </label>
                 <input type="text"  className="h-10 border mt-1 rounded px-4 w-full bg-gray-50" 
                   onChange={(e)=>setInputs ({...inputs,gender:e.target.value})} />
               </div>
@@ -61,20 +67,30 @@ const Add_Employee = () => {
               </div>
 
               <div className="md:col-span-5">
-                <label htmlFor ="email">Email Address</label>
-                <input type="text"  className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"  placeholder="email@domain.com"
-                 onChange={(e)=>setInputs ({...inputs,email:e.target.value})} />
+              <label>Married :</label>
+ <select class="select select-info h-10 border mt-1 rounded px-4 w-full bg-gray-50" onChange={(e)=>setInputs({...inputs,status:e.target.value})}>
+  
+  <option>Yes</option>
+  <option>No</option>
+ 
+  
+ </select>
               </div>
 
               <div className="md:col-span-3">
-                <label htmlFor ="address">Address / Street</label>
+                <label htmlFor ="address">Place of residence</label>
                 <input type="text" className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"  placeholder=""
                  onChange={(e)=>setInputs ({...inputs,address:e.target.value})} />
               </div>
               <div className="md:col-span-3">
-                <label htmlFor="address">HireDate</label>
-                <input type="date" className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"  placeholder=""
-                 onChange={(e)=>setInputs ({...inputs,HireDate:e.target.value})} />
+              <label>does your  children less than 18 or above:</label>
+ <select class="select select-info h-10 border mt-1 rounded px-4 w-full bg-gray-50" onChange={(e)=>setInputs({...inputs,status:e.target.value})}>
+  
+  <option>my children are less than 18 </option>
+  <option>my children are above 18</option>
+  
+  
+ </select>
               </div>
 
             
@@ -102,4 +118,4 @@ const Add_Employee = () => {
   )
 }
 
-export default Add_Employee
+export default Add_Yuusuf

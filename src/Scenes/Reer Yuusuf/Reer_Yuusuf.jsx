@@ -15,17 +15,17 @@ import {
   import PrintIcon from '@mui/icons-material/Print';
 
   {/*import { useAuthContext } from '../../hooks/useAuthContext' */}
-function Project() {
+function Reer_Yuusuf() {
   
  
-  const url = "http://localhost:8000/project"
+  const url = "http://localhost:8000/employe"
   const [data, setData] = useState([])
   useEffect(() => {
    
-    getProject() 
+    getEmployee() 
   }, [])
 
-  const getProject = () => {
+  const getEmployee = () => {
     fetch(url,
       {
         headers: {
@@ -39,7 +39,7 @@ function Project() {
   
     
     {
-      title: "Name", field: "ProjectName",width: 100,
+      title: "Name", field: "name",width: 100,
       cellStyle: {
         backgroundColor: '#ffff',
         color: '#000000',
@@ -49,10 +49,10 @@ function Project() {
           color: '#f1c232',
           
         },
-      validate: rowData => rowData.ProjectName === undefined || rowData.ProjectName === "" ? "Required" : true
+      validate: rowData => rowData.name === undefined || rowData.name === "" ? "Required" : true
     },
     {
-      title: "Project Date", field: "projectDate",
+      title: "DateOfBirth", field: "dateOfBirth",
       cellStyle: {
         backgroundColor: '#ffff',
         color:  '#000000',
@@ -62,10 +62,10 @@ function Project() {
           color: '#f1c232',
           
         },
-      validate: rowData => rowData.projectDate === undefined || rowData.projectDate === "" ? "Required" : true
+      validate: rowData => rowData.dateOfBirth === undefined || rowData.dateOfBirth === "" ? "Required" : true
     },
     {
-      title: "Task Title", field: 'taskTitle',
+      title: "Gender", field: 'gender',
       cellStyle: {
         backgroundColor: '#ffff',
         color: '#000000',
@@ -75,10 +75,10 @@ function Project() {
           color: '#f1c232',
           
         },
-      validate: rowData => rowData.taskTitle === undefined || rowData.taskTitle === "" ? "Required" : true
+      validate: rowData => rowData.gender === undefined || rowData.gender === "" ? "Required" : true
     },
     {
-      title: "Start Date", field: 'taskStartDate',
+      title: "Phone", field: 'contactNumber',
       cellStyle: {
         backgroundColor: '#ffff',
        color: '#000000',
@@ -88,10 +88,10 @@ function Project() {
           color: '#f1c232',
           
         },
-      validate: rowData => rowData.taskStartDate === undefined || rowData.taskStartDate === "" ? "Required" : true
+      validate: rowData => rowData.contactNumber === undefined || rowData.contactNumber === "" ? "Required" : true
     },
     {
-      title: "taskEndDate", field: 'taskEndDate',
+      title: "Email", field: 'email',
       cellStyle: {
         backgroundColor: '#ffff',
   color: '#000000',
@@ -101,10 +101,10 @@ function Project() {
           color: '#f1c232',
           
         },
-      validate: rowData => rowData.taskEndDate === undefined || rowData.taskEndDate === "" ? "Required" : true
+      validate: rowData => rowData.email === undefined || rowData.email === "" ? "Required" : true
     },
     {
-      title: "status", field: 'status',
+      title: "Address", field: 'address',
       cellStyle: {
         backgroundColor: '#ffff',
         color: '#000000',
@@ -114,7 +114,7 @@ function Project() {
           color: '#f1c232',
           
         },
-      validate: rowData => rowData.status === undefined || rowData.status === "" ? "Required" : true
+      validate: rowData => rowData.address === undefined || rowData.address === "" ? "Required" : true
     }]
     
   return (
@@ -122,9 +122,9 @@ function Project() {
      
      <div className="container max-w-screen-lg mx-auto ">
      <div className="flex  justify-end ">
-    <Link to='/Add_Project' className="border-2 mb-2">
+    <Link to='/Add_Yuusuf' className="border-2 mb-2">
     <PersonAddAlt1Icon  className="mr-1"/>
-      <button className=" border-indigo-900   mt-1 mr-4">Add Project</button>
+      <button className=" border-indigo-900   mt-1 mr-4">Add Person</button>
       
       </Link>
       <Tooltip arrow title="Print" >
@@ -134,7 +134,7 @@ function Project() {
             </Tooltip>
             </div>
       <MaterialTable 
-        title="Project Details"
+        title="Person Details"
         
         columns={columns}
         style={{maxWidth: '89vw', overflow: 'auto'
@@ -196,4 +196,4 @@ function Project() {
   );
 }
 
-export default Project;
+export default Reer_Yuusuf;

@@ -15,10 +15,10 @@ import {
   import PrintIcon from '@mui/icons-material/Print';
 
   {/*import { useAuthContext } from '../../hooks/useAuthContext' */}
-function Employee() {
+function Reer_Looge() {
   
  
-  const url = "http://localhost:8000/department"
+  const url = "http://localhost:8000/employe"
   const [data, setData] = useState([])
   useEffect(() => {
    
@@ -122,9 +122,9 @@ function Employee() {
      
      <div className="container max-w-screen-lg mx-auto ">
      <div className="flex  justify-end ">
-    <Link to='/addPatient' className="border-2 mb-2">
+    <Link to='/Add_Looge' className="border-2 mb-2">
     <PersonAddAlt1Icon  className="mr-1"/>
-      <button className=" border-indigo-900   mt-1 mr-4">Add Employee</button>
+      <button className=" border-indigo-900   mt-1 mr-4">Add Person</button>
       
       </Link>
       <Tooltip arrow title="Print" >
@@ -134,7 +134,7 @@ function Employee() {
             </Tooltip>
             </div>
       <MaterialTable 
-        title="Patient Details"
+        title="Payroll Details"
         
         columns={columns}
         style={{maxWidth: '89vw', overflow: 'auto'
@@ -196,4 +196,4 @@ function Employee() {
   );
 }
 
-export default Employee;
+export default Reer_Looge;

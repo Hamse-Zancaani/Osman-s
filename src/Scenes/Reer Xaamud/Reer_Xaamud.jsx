@@ -15,7 +15,7 @@ import {
   import PrintIcon from '@mui/icons-material/Print';
 
   {/*import { useAuthContext } from '../../hooks/useAuthContext' */}
-function Perfomance() {
+function Reer_Xaamud() {
   
  
   const url = "http://localhost:8000/employe"
@@ -122,9 +122,9 @@ function Perfomance() {
      
      <div className="container max-w-screen-lg mx-auto ">
      <div className="flex  justify-end ">
-    <Link to='/addPatient' className="border-2 mb-2">
+    <Link to='/Add_Xaamud' className="border-2 mb-2">
     <PersonAddAlt1Icon  className="mr-1"/>
-      <button className=" border-indigo-900   mt-1 mr-4">Add Perfomance</button>
+      <button className=" border-indigo-900   mt-1 mr-4">Add Person</button>
       
       </Link>
       <Tooltip arrow title="Print" >
@@ -134,7 +134,7 @@ function Perfomance() {
             </Tooltip>
             </div>
       <MaterialTable 
-        title="Patient Details"
+        title="Payroll Details"
         
         columns={columns}
         style={{maxWidth: '89vw', overflow: 'auto'
@@ -196,4 +196,4 @@ function Perfomance() {
   );
 }
 
-export default <Perfomance></Perfomance>;
+export default Reer_Xaamud;
